@@ -51,3 +51,4 @@ jobs:
         tag="${GITHUB_REF##*/}"
         assets="$(find dist/* -exec echo -a {} \;)"
         hub release create $assets -m "$tag" "$tag" || hub release edit $assets -m "" "$tag"
+      
